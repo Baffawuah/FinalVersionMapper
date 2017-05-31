@@ -22,12 +22,14 @@ namespace MyPacketCapturer
 {
     public partial class frmCapture : Form
     {
-        //List that stores the results from the IP locator website, as well as the count for each location
+        //List that stores the results from the IP locator website, as well as the count for each location.
         private static List<LocatorCounter> locations = new List<LocatorCounter> { };
+
+        //Starting
 
         //All markers
         private static GMap.NET.WindowsForms.GMapOverlay markers = new GMap.NET.WindowsForms.GMapOverlay("markers");
-
+        
         CaptureDeviceList devices;  //List of devices for this computers
         public static ICaptureDevice device;  //the device we will be using
         public static string stringPackets = "";  //data that was captured
